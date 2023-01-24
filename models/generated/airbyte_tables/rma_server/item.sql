@@ -43,7 +43,7 @@ select
     item_code,
     item_name,
     stock_uom,
-    thumbnail
+    thumbnail,
     {{ current_timestamp() }} as _airbyte_normalized_at,
     _airbyte_item_hashid
 from {{ ref('item_ab3') }}
